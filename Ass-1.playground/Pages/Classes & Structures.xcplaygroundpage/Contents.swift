@@ -7,11 +7,19 @@
 //: _(7 points)_
 class IntegerStack{
     var items = [Int]()
+    var element = 0
     func push(_ item: Int) {
         items.append(item)
+        element += 1
     }
-    func pop() -> Int {
-        return items.removeLast()
+    func pop() -> (Int?, String?) {
+        element -= 1
+        if element < 0 {
+            return (0," Empty stack")
+        }
+        else {
+            return (items.removeLast(),"Stack has \(element) element")
+        }
     }
 }
 
@@ -22,6 +30,10 @@ stack.push(1)
 stack.push(2)
 stack.push(3)
 print(stack.pop())
+print(stack.pop())
+print(stack.pop())
+print(stack.pop())
+
 //: Extend the `String` class to add the method `reverseWords()`. 
 //:
 //: You should then be able to get an output of `true` for the following input:
@@ -46,6 +58,7 @@ extension String{
     }
 }
 "mary had a little lamb".reverseWords()
+"mary had a little lamb".reverseWords() == "lamb little a had mary"
 //: Add a subclass of Vehicle called Car which implements makeNoise()
 //:
 //: Car should be initializable like this:

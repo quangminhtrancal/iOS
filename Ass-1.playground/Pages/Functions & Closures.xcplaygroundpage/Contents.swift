@@ -75,12 +75,13 @@ enum TimeUnit: Float{
     case Hour = 3600
     case Day = 86400
     case Week = 604800
-    func converTo(_ unit: TimeUnit)-> Float{
+    func convertTo(_ unit: TimeUnit)-> Float{
         return (Float(self.rawValue)/Float(unit.rawValue))
     }
 }
 
 var time = TimeUnit.Second
-print(TimeUnit.Day.converTo(TimeUnit.Hour))
+print(TimeUnit.Day.convertTo(TimeUnit.Hour))
+TimeUnit.Day.convertTo(TimeUnit.Hour) == 24.0
 
 //: [To page 3 of 3 ...](@next)

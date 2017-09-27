@@ -18,8 +18,6 @@ var index=string.index(string.startIndex, offsetBy: 8)
 print(string[index])
 //: Print the first 4 characters in 'string'.
 //: _(2 points)_
-//var firstfour=string.remove(at: string.index(string.startIndex, offsetBy: 8))
-//var index = string.index(of: " ")
 
 print(string.prefix(4))
 
@@ -79,7 +77,7 @@ for name in capitalcity{
         }
     }
 }
-//capitals.mapValues(<#T##transform: (String) throws -> T##(String) throws -> T#>)
+
 //: Add "a" to the value in the key "hello" in this dictionary. You can only add one line of code!
 //: _(2 point)_
 var someDictionary = ["hello": ["b", "c"]]
